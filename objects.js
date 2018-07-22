@@ -1,7 +1,10 @@
-function deleteFromObjectByKey(object, key) {
-  let newObj = Object.assign({}, object) //make a copy
+var playlist = {artistName: 'songTitle'};
 
-  delete newObj[key] //delete the key from copy
-
-  return newObj //return the copy
+function updatePlaylist(playlist,artistName,songTitle) {
+  playlist[artistName] = songTitle
+  return playlist
+}
+function removeFromPlaylist(playlist,artistName) {
+  delete playlist[artistName]
+  return playlist
 }
